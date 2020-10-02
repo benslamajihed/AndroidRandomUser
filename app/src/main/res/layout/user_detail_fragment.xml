@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.userdetails.UserDetailsFragment">
+
+    <ProgressBar
+        android:id="@+id/progress_bar_user_details"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:indeterminate="true"
+        tools:visibility="gone" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/user_cl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp">
+            <!--Image -->
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/image"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:layout_marginTop="16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+            <!-- name -->
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/image"
+                tools:text="TextView" />
+
+            <!--email -->
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/emailLabel"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:textSize="14sp"
+                android:textStyle="italic"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/name"
+                android:text="Email : " />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/emailContent"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="@+id/emailLabel"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/emailLabel"
+                app:layout_constraintTop_toBottomOf="@id/name"
+                app:layout_constraintTop_toTopOf="@+id/emailLabel"
+                tools:text="ben.slama.jihed@gmail.com" />
+            <!--gender-->
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/genderLabel"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:textSize="14sp"
+                android:textStyle="italic"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/emailLabel"
+                android:text="Gender : " />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/genderContent"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="@+id/genderLabel"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/genderLabel"
+                app:layout_constraintTop_toBottomOf="@id/emailLabel"
+                app:layout_constraintTop_toTopOf="@+id/genderLabel"
+                tools:text="Homme" />
+            <!--location-->
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/locationLabel"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:textSize="14sp"
+                android:textStyle="italic"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/genderLabel"
+                android:text="location : " />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/locationContent"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="@+id/locationLabel"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/locationLabel"
+                app:layout_constraintTop_toBottomOf="@id/genderLabel"
+                app:layout_constraintTop_toTopOf="@+id/locationLabel"
+                tools:text="location" />
+            <!--phone-->
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/phonelLabel"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:textSize="14sp"
+                android:textStyle="italic"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/locationLabel"
+                android:text="Phone : " />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/phoneContent"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="@+id/phonelLabel"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/phonelLabel"
+                app:layout_constraintTop_toBottomOf="@id/locationLabel"
+                app:layout_constraintTop_toTopOf="@+id/phonelLabel"
+                tools:text="+33" />
+            <!--login-->
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/loginLabel"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:textSize="14sp"
+                android:textStyle="italic"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/phonelLabel"
+                android:text="Login : " />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/loginContent"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="@+id/loginLabel"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/loginLabel"
+                app:layout_constraintTop_toBottomOf="@id/phonelLabel"
+                app:layout_constraintTop_toTopOf="@+id/loginLabel"
+                tools:text="logiiiiiiinnnnnn" />
+            <!--dob-->
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/dobLabel"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:textSize="14sp"
+                android:textStyle="italic"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/loginLabel"
+                android:text="dob : " />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/dobContent"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="@+id/dobLabel"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/dobLabel"
+                app:layout_constraintTop_toBottomOf="@id/loginLabel"
+                app:layout_constraintTop_toTopOf="@+id/dobLabel"
+                tools:text="12/03/2020" />
+            <!--registered-->
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/registeredLabel"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:textSize="14sp"
+                android:textStyle="italic"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/dobLabel"
+                android:text="registeredLabel : " />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/registeredContent"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="@+id/registeredLabel"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/registeredLabel"
+                app:layout_constraintTop_toBottomOf="@id/dobLabel"
+                app:layout_constraintTop_toTopOf="@+id/registeredLabel"
+                tools:text="registeredContent" />
+            <!--        cell-->
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/celllLabel"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:textSize="14sp"
+                android:textStyle="italic"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/registeredLabel"
+                android:text="Cell : " />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/cellContent"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="@+id/celllLabel"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/celllLabel"
+                app:layout_constraintTop_toBottomOf="@id/registeredLabel"
+                app:layout_constraintTop_toTopOf="@+id/celllLabel"
+                tools:text="cell" />
+            <!--        nat-->
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/natLabel"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:textSize="14sp"
+                android:textStyle="italic"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/celllLabel"
+                android:text="Nat : " />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/natContent"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="@+id/natLabel"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/natLabel"
+                app:layout_constraintTop_toBottomOf="@id/celllLabel"
+                app:layout_constraintTop_toTopOf="@+id/natLabel"
+                tools:text="ben.slama.jihed@gmail.com" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</FrameLayout>

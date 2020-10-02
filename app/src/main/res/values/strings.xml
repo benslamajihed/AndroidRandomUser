@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">tt</string>
+    <string name="placeholder_name">First Name and Last Name</string>
+    <string name="delete_database">Clear Data Base</string>
+    <string name="Users">User</string>
+    <string name="Details">User Detail</string>
+</resources>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="margin_rv">16dp</dimen>
+    <dimen name="card_radius">5sp</dimen>
+    <dimen name="card_elevation">5dp</dimen>
+    <dimen name="thum_user">60dp</dimen>
+    <dimen name="thum_margin_user">10dp</dimen>
+    <dimen name="padding_card">10dp</dimen>
+    <dimen name="textsize_user">18sp</dimen>
+</resources>
