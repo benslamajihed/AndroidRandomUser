@@ -5,6 +5,7 @@ This Project is intended to demonstrate the use of:
 
 - MVVM architecture
 - Room
+- Hilt
 - LiveData
 - Coroutines
 - RetroFit / GSON
