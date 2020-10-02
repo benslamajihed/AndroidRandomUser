@@ -20,6 +20,12 @@ class UsersRepository @Inject constructor(
         saveCallResult = { localDataSource.insertAll(it.results) }
     )
 
+    fun getUsers(page: Int, count: Int, seed: String) = performGetOperation(
+        databaseQuery = { localDataSource.getAllUsers() },
+        networkCall = { remoteDataSource.getUsers(page, count, seed) },
+        saveCallResult = { localDataSource.insertAll(it.results) }
+    )
+
     fun reloadUser() = performGetOperation(
         databaseQuery = { localDataSource.getAllUsers() },
         networkCall = {

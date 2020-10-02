@@ -13,6 +13,7 @@ import com.jbs.ttechnique.R
 import com.jbs.ttechnique.data.model.Id
 import com.jbs.ttechnique.databinding.MainFragmentBinding
 import com.jbs.ttechnique.ui.userdetails.UserDetailsFragment
+import com.jbs.ttechnique.utils.EndlessRecyclerViewScrollListener
 import com.jbs.ttechnique.utils.Resource
 import com.jbs.ttechnique.utils.autoCleared
 import dagger.hilt.android.AndroidEntryPoint
@@ -53,8 +54,16 @@ class MainFragment : Fragment(), UsersAdapter.UserItemListener {
 
     private fun setupRecyclerView() {
         adapter = UsersAdapter(this)
-        binding.usersRv.layoutManager = LinearLayoutManager(requireContext())
-        binding.usersRv.adapter = adapter
+        binding.usersRv.apply {
+            layoutManager = LinearLayoutManager(requireContext())
+            adapter = this@MainFragment.adapter
+            addOnScrollListener(object :
+                EndlessRecyclerViewScrollListener(layoutManager as LinearLayoutManager) {
+                override fun onLoadMore(page: Int, totalItemsCount: Int) {
+                    viewModel.loadMoreUser()
+                }
+            })
+        }
     }
 
     private fun setupObservers() {

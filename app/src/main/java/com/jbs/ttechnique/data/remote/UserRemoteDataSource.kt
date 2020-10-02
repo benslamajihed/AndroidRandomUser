@@ -10,4 +10,8 @@ class UserRemoteDataSource @Inject constructor(private val userService: UserServ
         userService.getAllUsers(1, RESULT_COUNT, "abc")
     }
 
+    suspend fun getUsers(page: Int, count: Int, seed: String) = getResult {
+        userService.getAllUsers(page, count, seed)
+    }
+
 }
